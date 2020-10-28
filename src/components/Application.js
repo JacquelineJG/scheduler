@@ -81,11 +81,7 @@ export default function Application(props) {
   const appointment = appointments.map(appointment => {
     const interview = appointment.interview
     return (
-      <Appointment 
-        id={appointment.id}
-        time={appointment.time}
-        interview={interview}
-      />
+      <Appointment key={appointment.id} {...appointment} />
 
 
         
@@ -111,7 +107,7 @@ export default function Application(props) {
     /> 
     </section>
     <section className="schedule">
-      <Appointment key={appointment.id} {...appointment} />
+      {appointment}
       <Appointment key="last" time="5pm" />
     </section>
   </main>
