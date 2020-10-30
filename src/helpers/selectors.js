@@ -30,6 +30,6 @@ export function getInterviewersForDay(state, day) {
     return []; 
   }
   const filteredInterviews = filteredDays.interviewers.map(id => state.interviewers[id])
- 
+
   return filteredInterviews;
 } 
