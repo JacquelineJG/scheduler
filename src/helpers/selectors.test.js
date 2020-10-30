@@ -21,7 +21,7 @@ const state = {
       time: "2pm",
       interview: { student: "Archie Cohen", interviewer: 2 }
     },
-    "4": { id: 4, time: "3pm", interview: null },
+    "4": { id: 4, time: "3pm", interview: null},
     "5": {
       id: 5,
       time: "4pm",
@@ -39,9 +39,29 @@ interviewers: {
     id: 2,
     name: "Tori Malcolm",
     avatar: "https://i.imgur.com/Nmx0Qxo.png"
+  },
+  "3": {
+    id: 3,
+    name: "Tori Malcolm",
+    avatar: "https://i.imgur.com/Nmx0Qxo.png"
   }
-} 
+},
+
+
+interviews: {
+  "4": {
+    avatar: "https://i.imgur.com/LpaY82x.png",
+    id: 1,
+    name: "Sylvia Palmer"
+  },
+  "5": {
+    id: 2,
+    name: "Tori Malcolm",
+    avatar: "https://i.imgur.com/Nmx0Qxo.png"
+  }
+}
 };
+
 
 test("getAppointmentsForDay returns an array", () => {
   const result = getAppointmentsForDay(state, "Monday");

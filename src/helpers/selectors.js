@@ -22,15 +22,14 @@ export function getInterview(state, interview) {
 }
 
 export function getInterviewersForDay(state, day) {
-  const filteredDays = state.days.find(days => days.name === day)
+  const filteredDays = state.days.find(days => days.name === day);
   if (filteredDays === undefined) {
     return [];
   }
   if (state.days.length === 0) {
-    return [];
+    return []; 
   }
-  const interviewers = Object.values(state.interviewers).filter(interviewer =>
-    filteredDays.interviewers.includes(interviewer.id)
-    );
-    return interviewers
-}
+  const filteredInterviews = Object.entries(filteredDays.appointments.map(id => state.appointments[id])
+  ); 
+  return filteredInterviews;
+} 
