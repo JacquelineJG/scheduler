@@ -29,7 +29,7 @@ export function getInterviewersForDay(state, day) {
   if (state.days.length === 0) {
     return []; 
   }
-  const filteredInterviews = Object.entries(filteredDays.appointments.map(id => state.appointments[id])
-  ); 
+  const filteredInterviews = filteredDays.interviewers.map(id => state.interviewers[id])
+ 
   return filteredInterviews;
 } 
