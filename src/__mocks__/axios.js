@@ -94,5 +94,13 @@ export default {
       status: 200,
       statusText: "OK"
     });
+  }),
+  delete: jest.fn(url => {
+    console.log("axios")
+    return Promise.reject({
+      status: 400,
+      statusText: "OK"
+    });
   })
+  //delete promise reject and promis resolve needed for when test errors vs when it passes
 };
