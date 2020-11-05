@@ -10,6 +10,8 @@ Welcome to Interview Scheduler! Users can book interviews Monday through Friday 
 * Need to make changes? Users are able to edit interviews by hovering over and selecting the edit button
 * Change of heart? Users can delete existing appointments by hovering over and selecting the delete button
 
+!["Runthrough of basic app functionality](https://github.com/JacquelineJG/scheduler/blob/master/docs/Interview-scheduler-runthrough.gif?raw=true)
+
 ## Setup
 
 Install dependencies with `npm install`.
